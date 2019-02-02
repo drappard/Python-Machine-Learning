@@ -10,7 +10,7 @@ import pandas as pd
 df = pd.read_csv('breast-cancer-wisconsin.data')
 #replace missing data
 df.replace('?', -99999, inplace=True)
-df.drop(['id'], 1, inplace=True)
+#df.drop(['id'], 1, inplace=True)
 
 X = np.array(df.drop(['class'], 1))
 y = np.array(df['class'])
@@ -24,3 +24,8 @@ clf.fit(X_train, y_train)
 accuracy = clf.score(X_test, y_test)
 print(accuracy)
 #Accuracy Output: 0.9428571428571428
+
+################# Addition of ID Column ##################
+#Impact of meaningless/misleading data by commenting out df.drop ID
+#Accuracy drops by ~30%
+#Accuracy Output with ID column: 0.65
