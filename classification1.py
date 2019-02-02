@@ -10,7 +10,7 @@ import pandas as pd
 df = pd.read_csv('breast-cancer-wisconsin.data')
 #replace missing data
 df.replace('?', -99999, inplace=True)
-#df.drop(['id'], 1, inplace=True)
+df.drop(['id'], 1, inplace=True)
 
 X = np.array(df.drop(['class'], 1))
 y = np.array(df['class'])
@@ -29,3 +29,13 @@ print(accuracy)
 #Impact of meaningless/misleading data by commenting out df.drop ID
 #Accuracy drops by ~30%
 #Accuracy Output with ID column: 0.65
+
+################# Testing and Prediction #################
+example_measures = np.array([[4,2,1,1,1,2,3,2,1],[4,2,1,1,1,2,3,2,1]])
+example_measures = example_measures.reshape(2,-1)
+prediction = clf.predict(example_measures)
+print(prediction)
+
+#Two Sample Output: 
+#Acurracy: 0.9714285714285714
+#Prediction: [2 2]
