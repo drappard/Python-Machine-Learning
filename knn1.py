@@ -2,6 +2,7 @@
 #Part 14 - Applying K Nearest Neighbors to Data
 
 #Breast Cancer Dataset - https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/
+#KNN Applied from Scikit-Learn package
 
 import numpy as np
 from sklearn import preprocessing, cross_validation, neighbors
@@ -36,6 +37,6 @@ example_measures = example_measures.reshape(2,-1)
 prediction = clf.predict(example_measures)
 print(prediction)
 
-#Two Sample Output: 
+#Two Sample Output:
 #Acurracy: 0.9714285714285714
 #Prediction: [2 2]
