@@ -8,7 +8,7 @@ import warnings
 from collections import Counter
 import pandas as pd
 import random
-style.use('fivthirtyeight')
+style.use('fivethirtyeight')
 
 def k_nearest_neighbors(data, predict, k=3):
     if len(data) >= k:
@@ -55,7 +55,7 @@ for group in test_set:
     #iterate through each datapoint in each class
     for data in test_set[group]:
         vote = k_nearest_neighbors(train_set, data, k=5)
-        if group == vote
+        if group == vote:
             correct += 1
         total += 1
 print('Accuracy:', correct/total)
