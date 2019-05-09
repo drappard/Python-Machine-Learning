@@ -1,6 +1,6 @@
 #Python Machine Learning Tutorial
 #Deep Learning with TensorFlow
-#Part 3 - Creating the Neural Network Model
+#Part 2 - Creating the Neural Network Model
 
 import tensorflow as tf
 from tensorflow import keras
