@@ -25,7 +25,15 @@ class Support_Vector_Machine:
 
         #train
         def fit(self,features):
-            pass
+            self.data = data_dict
+            #{ ||w||: [w,b] }
+            opt_dict = {}
+
+            transforms = [[1,1],
+                          [-1,1],
+                          [-1,-1],
+                          [1,-1]]
+
 
         def predict(self,features):
             #sign(x.w+b)
